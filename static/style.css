@@ -1,13 +1,13 @@
 /* Color Variables */
 :root {
-  --primary-color: #0077b6;     /* Deep Blue */
-  --secondary-color: #00b4d8;   /* Light Blue */
-  --text-color: #333;           /* Dark Gray Text */
-  --background-color: #f5f5f5;  /* Light Gray Background */
-  --error-background: #FFD2D2;  /* Light Red Background */
-  --error-text: #D8000C;        /* Dark Red Text */
-  --success-background: #DFF2BF; /* Light Green Background */
-  --success-text: #4F8A10;      /* Dark Green Text */
+  --primary-color: #210032;     
+  --secondary-color: #9551fa;   
+  --text-color: #333;           
+  --background-color: #f5f5f5;  
+  --error-background: #FFD2D2;  
+  --error-text: #D8000C;        
+  --success-background: #DFF2BF; 
+  --success-text: #4F8A10;      
 }
 
 /* Common styles for all screen sizes */

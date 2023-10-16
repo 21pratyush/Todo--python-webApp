@@ -1,130 +1,196 @@
+/* Color Variables */
+:root {
+  --primary-color: #0077b6;     /* Deep Blue */
+  --secondary-color: #00b4d8;   /* Light Blue */
+  --text-color: #333;           /* Dark Gray Text */
+  --background-color: #f5f5f5;  /* Light Gray Background */
+  --error-background: #FFD2D2;  /* Light Red Background */
+  --error-text: #D8000C;        /* Dark Red Text */
+  --success-background: #DFF2BF; /* Light Green Background */
+  --success-text: #4F8A10;      /* Dark Green Text */
+}
+
+/* Common styles for all screen sizes */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 20px;
+  color: var(--text-color);
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
-    padding: 8px;
-    font-size: 16px;
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #00a5c2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 li a {
-    margin-left: auto;
-    text-decoration: none;
-    color: #4CAF50;
+  margin-left: auto;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .flash-messages {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 .flash-messages li {
-    padding: 8px;
-    margin: 5px;
-    border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .flash-messages .error {
-    background-color: #FFD2D2;
-    color: #D8000C;
+  background-color: var(--error-background);
+  color: var(--error-text);
 }
 
 .flash-messages .success {
-    background-color: #DFF2BF;
-    color: #4F8A10;
+  background-color: var(--success-background);
+  color: var(--success-text);
 }
 
 .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px auto;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto;
+  position: relative;
 }
 
 .circle p {
-    margin: 0;
-    color: black;
+  margin: 0;
+  color: var(--text-color);
 }
 
-/* Media query for screens smaller than 768px (e.g., mobile devices) */
-@media screen and (max-width: 768px) {
-    body {
-        margin: 10px;
-    }
+/* Breakpoint for screens larger than 768px */
+@media screen and (min-width: 769px) {
+  body {
+    margin: 20px;
+  }
 
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 28px;
+  }
+}
 
-    form {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Breakpoint for screens between 481px and 768px (medium screens) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    margin: 15px;
+  }
 
-    input[type="text"] {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  h1 {
+    font-size: 24px;
+  }
 
-    button {
-        margin-left: 0;
-    }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    ul li {
-        padding: 5px;
-    }
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-    .circle {
-        margin: 10px auto;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
+  button {
+    margin-left: 0;
+  }
 
-    .circle p {
-        font-size: 18px;
-    }
+  ul li {
+    padding: 5px;
+  }
+
+  .circle {
+    margin: 10px auto;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .circle p {
+    font-size: 18px;
+  }
+}
+
+/* Breakpoint for screens up to 480px (small screens) */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  ul li {
+    padding: 5px;
+  }
+
+  .circle {
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .circle p {
+    font-size: 14px;
+  }
 }
 

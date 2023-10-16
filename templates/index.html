@@ -3,8 +3,10 @@
 <head>
     <title>Todo-App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_PtsyQs0CM2t-g7MdXCDHyYUgrvYjvWQV0g&usqp=CAU">
 </head>
 <body>
+  <div class="background">	
     <h1>Todo List</h1>
     <form action="/add" method="post">
         <input type="text" name="content" placeholder="Enter task">
@@ -38,8 +40,9 @@
             </ul>
         {% endif %}
     {% endwith %}
-
+  </div>
     <script>
+	    var completed_count = {{ completed_count }};   
         // Function to toggle visibility of the "Total tasks completed" div
         function toggleTotalCompleted() {
             const circleDiv = document.querySelector('.circle');
